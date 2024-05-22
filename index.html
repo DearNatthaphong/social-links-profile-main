@@ -1,34 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Social links profile</title>
+    <!-- <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    /> -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Social links profile</title>
 
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
+    <!-- tailwindcss installation cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryGreen: 'hsl(75, 94%, 57%)',
+              neutralWhite: 'hsl(0, 0%, 100%)',
+              neutralGrey: 'hsl(0, 0%, 20%)',
+              neutralDarkGrey: 'hsl(0, 0%, 12%)',
+              neutralOffBlack: 'hsl(0, 0%, 8%)'
+            }
+          }
+        }
+      };
+    </script>
 
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- Font Family: [Inter]  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-neutralOffBlack text-neutralWhite text-sm font-normal font-['Inter'] flex flex-col justify-center items-center gap-6 min-h-screen"
+  >
+    <!-- card -->
+    <main
+      class="bg-neutralDarkGrey w-[327px] xl:w-[384px] flex flex-col items-center p-6 xl:p-12 rounded-2xl gap-6"
+    >
+    
+        <img
+          class="rounded-full w-[88px]"
+          src="./assets/images/avatar-jessica.jpeg"
+          alt=""
+        />
+        <div>
+          <h1 class="text-2xl font-semibold">Jessica Randall</h1>
+          <p class="text-primaryGreen font-bold pt-2">London, United Kingdom</p>
+        </div>
+        <p>"Front-end developer and avid reader."</p>
+      </div>
+      <div class="flex flex-col gap-3 w-full">
+        <button class="bg-neutralGrey hover:bg-primaryGreen hover:text-neutralOffBlack hover:cursor-pointer w-full py-3 font-bold rounded-md"><a href="#">GitHub</a></button>
+        <button class="bg-neutralGrey hover:bg-primaryGreen hover:text-neutralOffBlack hover:cursor-pointer w-full py-3 font-bold rounded-md"><a href="#">Frontend Mentor</a></button>
+        <button class="bg-neutralGrey hover:bg-primaryGreen hover:text-neutralOffBlack hover:cursor-pointer w-full py-3 font-bold rounded-md"><a href="#">LinkedIn</a></button>
+        <button class="bg-neutralGrey hover:bg-primaryGreen hover:text-neutralOffBlack hover:cursor-pointer w-full py-3 font-bold rounded-md"><a href="#">Twitter</a></button>
+        <button class="bg-neutralGrey hover:bg-primaryGreen hover:text-neutralOffBlack hover:cursor-pointer w-full py-3 font-bold rounded-md"><a href="#">Instagram</a></button>
+      </div>
+    </main>
+    <!-- credit  -->
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.frontendmentor.io/profile/DearNatthaphong">Natthaphong Thongphueng</a>.
+    </footer>
+  </body>
 </html>
